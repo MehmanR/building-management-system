@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import java.util.List;
+
 @Entity
 @Setter
 @Getter
@@ -26,7 +28,8 @@ public class Building {
     private int floor;
 
     @Column(nullable = false)
-    private int rooms;
+    @OneToMany
+    private List<Room> rooms;
 
     @Column(nullable = false)
     private double capacity;

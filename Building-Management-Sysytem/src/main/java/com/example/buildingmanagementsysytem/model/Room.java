@@ -49,5 +49,8 @@ public class Room {
     @ManyToOne
     private Building building;
 
+    @ManyToOne
+    private Company company;
+
 
 }
