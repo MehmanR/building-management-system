@@ -28,9 +28,11 @@ public class Building {
     private int floor;
 
     @Column(nullable = false)
+    private double capacity;
+
+    @Column(nullable = false)
     @OneToMany
     private List<Room> rooms;
 
-    @Column(nullable = false)
-    private double capacity;
+
 }
