@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /*
 
@@ -45,5 +46,6 @@ public class User {
     @Column(name = "accessible",nullable = false)
     private boolean isBlocked;
 
-
+    @ManyToMany
+    private List<Role> roles;
 }
